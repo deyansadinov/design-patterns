@@ -1,5 +1,10 @@
 *.class
 
+.idea
+*.xml
+lib/jmock/jmock-2.6.0-javadoc
+*.iml
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
