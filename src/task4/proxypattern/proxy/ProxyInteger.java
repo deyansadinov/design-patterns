@@ -6,7 +6,6 @@ package task4.proxypattern.proxy;
 public class ProxyInteger implements Integer {
 
   private final int number;
-  private RealInteger realInteger;
 
   public ProxyInteger(int number) {
     this.number = number;
@@ -14,13 +13,7 @@ public class ProxyInteger implements Integer {
 
   @Override
   public void printNumber() {
-    if (realInteger == null){
-      realInteger = new RealInteger(number);
-    }
+    RealInteger realInteger = new RealInteger(number);
     realInteger.printNumber();
   }
-
-
-
-
 }
