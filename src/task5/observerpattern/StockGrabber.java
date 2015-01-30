@@ -15,7 +15,7 @@ public class StockGrabber implements Subject {
   private double googPrice;
 
   public StockGrabber() {
-    observers = new ArrayList<>();
+    observers = new ArrayList<Observer>();
   }
 
   @Override
