@@ -7,13 +7,12 @@ public class Main {
   public static void main(String[] args) {
     HousePartsFactory factory = new HousePartsFactory();
 
-    HouseParts window = factory.getHouseParts("window");
-    HouseParts floor = factory.getHouseParts("floor");
-    HouseParts door = factory.getHouseParts("door");
+    HouseParts door = factory.getHouseParts("Door");
+    HouseParts floor = factory.getHouseParts("Floor");
+    HouseParts window = factory.getHouseParts("Window");
 
+    door.getPart(door.getClass().getName());
+    floor.getPart(floor.getClass().getName());
     window.getPart(window.getClass().getName());
-    floor.getPart(floor.getClass().toString());
-    door.getPart(door.getClass().toString());
-
   }
 }

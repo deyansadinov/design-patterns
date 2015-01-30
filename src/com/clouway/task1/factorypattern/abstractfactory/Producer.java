@@ -3,7 +3,7 @@ package com.clouway.task1.factorypattern.abstractfactory;
 /**
  * @author Deyan Sadinov <sadinov88@gmail.com>
  */
-public class FactoryProducer {
+public class Producer {
   public static AbstractFactory getFactory(String choice){
     if (choice.equalsIgnoreCase("SHAPE")){
         return new ShapeFactory();

@@ -7,8 +7,8 @@ public class AbstractFactoryPatternDemo {
   public static void main(String[] args) {
 
     //get shape factory
-    AbstractFactory shapeFactory = FactoryProducer.getFactory("SHAPE");
-    AbstractFactory colorFactory = FactoryProducer.getFactory("COLOR");
+    AbstractFactory shapeFactory = Producer.getFactory("SHAPE");
+    AbstractFactory colorFactory = Producer.getFactory("COLOR");
 
 
     Shape shape1 = shapeFactory.getShape("CIRCLE");

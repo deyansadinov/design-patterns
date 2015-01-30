@@ -6,26 +6,15 @@ package com.clouway.task1.factorypattern.reflection;
 public class HousePartsFactory {
 
   public HouseParts getHouseParts(String type) {
-    if (type.equals("window")) {
-      try {
-        return Window.class.newInstance();
-      } catch (InstantiationException | IllegalAccessException e) {
-        e.printStackTrace();
-      }
-    }
-    if (type.equals("door")) {
-      try {
-        return Door.class.newInstance();
-      } catch (InstantiationException | IllegalAccessException e) {
-        e.printStackTrace();
-      }
-    }
-    if (type.equals("floor")){
-      try {
-        return Floor.class.newInstance();
-      } catch (InstantiationException | IllegalAccessException e) {
-        e.printStackTrace();
-      }
+
+    try {
+      return (HouseParts) Class.forName("com.clouway.task1.factorypattern.reflection." + type).newInstance();
+    } catch (InstantiationException e) {
+      e.printStackTrace();
+    } catch (IllegalAccessException e) {
+      e.printStackTrace();
+    } catch (ClassNotFoundException e) {
+      e.printStackTrace();
     }
     return null;
   }
