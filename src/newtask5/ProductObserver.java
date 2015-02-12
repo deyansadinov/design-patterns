@@ -3,7 +3,7 @@ package newtask5;
 /**
  * @author Deyan Sadinov <sadinov88@gmail.com>
  */
-public interface ProductListener {
+public interface ProductObserver {
 
   void onProductRegistered(Product product);
 

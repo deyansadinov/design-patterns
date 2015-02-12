@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * @author Deyan Sadinov <sadinov88@gmail.com>
  */
-public class AvailableProducts implements ProductListener {
+public class AvailableProducts implements ProductObserver {
 
   private List<Product> listAvailableProducts = new ArrayList<Product>();
 

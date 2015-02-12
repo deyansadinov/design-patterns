@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class Warehouse {
 
-  private List<ProductListener> productListenerList = new ArrayList<ProductListener>();
+  private List<ProductObserver> productObserverList = new ArrayList<ProductObserver>();
 
   public void saleProduct(Product product){
     notifySale(product);
@@ -20,18 +20,18 @@ public class Warehouse {
   }
 
 
-  public void addListener(ProductListener productListener){
-    productListenerList.add(productListener);
+  public void addListener(ProductObserver productObserver){
+    productObserverList.add(productObserver);
   }
 
   private void notifySale(Product product) {
-    for (ProductListener listener : productListenerList){
+    for (ProductObserver listener : productObserverList){
       listener.onProductSold(product);
     }
   }
 
   private void notifyRegistration(Product product) {
-    for (ProductListener listener : productListenerList){
+    for (ProductObserver listener : productObserverList){
       listener.onProductRegistered(product);
     }
   }
