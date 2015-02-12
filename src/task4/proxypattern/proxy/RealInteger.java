@@ -9,10 +9,6 @@ public class RealInteger implements Integer {
 
   public RealInteger(int number) {
     this.number = number;
-    loadFromDisk(number);
-  }
-
-  private void loadFromDisk(int number) {
     System.out.println("Loading " + number);
   }
 
