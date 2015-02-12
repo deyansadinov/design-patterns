@@ -6,7 +6,7 @@ package com.clouway.task1.factorypattern.newabstractfactory;
 public class AbstractFactory {
 
   public CarFactory getCarFactory(String type) {
-    if ("BMW".equalsIgnoreCase(type)){
+    if ("german".equalsIgnoreCase(type)){
       return new GermanCarFactory();
     }else {
       return new ItalianCarFactory();
