@@ -5,15 +5,18 @@ package task4.proxypattern.proxy;
  */
 public class ProxyInteger implements Integer {
 
+  private RealInteger numb = null;
   private final int number;
 
-  public ProxyInteger(int number) {
+  public ProxyInteger(final int number) {
     this.number = number;
   }
 
   @Override
   public void printNumber() {
-    RealInteger realInteger = new RealInteger(number);
-    realInteger.printNumber();
+    if (numb == null){
+      numb = new RealInteger(number);
+    }
+    numb.printNumber();
   }
 }
